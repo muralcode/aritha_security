@@ -7,7 +7,7 @@
 #include <vector>
 #include <optional>
 
-// @dev_notes: lock ring buffer for concurrency
+// A lock ring buffer for concurrency
 template <typename T, size_t Capacity>
 class BufferQueue {
 public:
@@ -22,7 +22,7 @@ public:
         auto currentTail = m_tail.load(std::memory_order_relaxed);
         auto nextTail = (currentTail + 1) % Capacity;
         if (nextTail == m_head.load(std::memory_order_acquire)) {
-            // Full
+            // If Full
             return false;
         }
         m_buffer[currentTail] = item;
@@ -34,7 +34,7 @@ public:
         auto currentTail = m_tail.load(std::memory_order_relaxed);
         auto nextTail = (currentTail + 1) % Capacity;
         if (nextTail == m_head.load(std::memory_order_acquire)) {
-            // Full
+            // It's Full
             return false;
         }
         m_buffer[currentTail] = std::move(item);
@@ -45,7 +45,7 @@ public:
     std::optional<T> pop() {
         auto currentHead = m_head.load(std::memory_order_relaxed);
         if (currentHead == m_tail.load(std::memory_order_acquire)) {
-            // Empty
+            // It's Empty
             return std::nullopt;
         }
         T item = std::move(m_buffer[currentHead]);

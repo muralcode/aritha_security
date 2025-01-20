@@ -31,7 +31,7 @@ file(GLOB_RECURSE SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
 )
 
-add_executable(HomeSurveillance ${SOURCES})
+add_executable(aritha_security ${SOURCES})
 
 target_link_libraries(aritha_security
     ${AVFORMAT_LIBRARIES}
