@@ -1,8 +1,6 @@
 // Author: Lerato Mokoena
 // Company: Arithaoptix pty Ltd.
 
-#pragma once
-
 #include <atomic>
 #include <vector>
 #include <optional>

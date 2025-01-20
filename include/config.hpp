@@ -1,6 +1,6 @@
-
 // Author: Lerato Mokoena
 // Company: Arithaoptix pty Ltd.
+
 #pragma once
 
 #include <string>

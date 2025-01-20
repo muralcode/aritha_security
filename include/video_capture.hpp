@@ -11,10 +11,10 @@ extern "C" {
 #include <string>
 #include <thread>
 #include <atomic>
-#include "logger.h"
-#include "buffer_queue.h"
+#include <logger.hpp>
+#include <buffer_queue.hpp>
 
-// A container to pass decoded frames
+// IE. A container to pass decoded frames
 struct DecodedFrame {
     AVFrame* frame = nullptr;
     int64_t pts    = 0;
