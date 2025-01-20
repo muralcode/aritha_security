@@ -1,8 +1,12 @@
 # Aritha Security
  A high-performance home surveillance video processing and streaming solution designed for seamless encoding, decoding, and real-time streaming of video content. It leverages FFmpeg,  of which is a widely-used multimedia framework, and uses advanced C++ techniques to ensure reliability and scalability. Below is a detailed high-level overview.
 
- # Idea switch 
- At first I wanted to create a just library but I will develop a high performance home suiveilance pipeline to demontrate. 
+ ## Experience and Project. 
+ In my recent project, I designed and implemented a high-performance video processing and streaming system using advanced C++ techniques and FFmpeg to enable real-time video delivery. The system was built with scalability and modularity in mind, focusing on efficient handling of video encoding, decoding, and real-time streaming protocols like RTSP. It’s engineered to ensure minimal latency, high reliability, and seamless integration with different platform.
+
+## Challenges on the role
+
+One of the most significant challenges was optimizing real-time streaming under varying network conditions. For example, maintaining packet integrity over RTSP in environments with intermittent bandwidth required designing a custom retry and buffering mechanism to avoid noticeable quality degradation. This was implemented using FFmpeg’s network I/O hooks.”
 
  # Dynamic architecture
 
